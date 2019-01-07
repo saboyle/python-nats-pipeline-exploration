@@ -29,7 +29,7 @@ def sync_null_transform(data, wait):
 
 @asyncio.coroutine
 def async_null_transform(data, wait):
-    asyncio.sleep(wait / 1000)  # !!! Blocking wait
+    asyncio.sleep(wait / 1000)  # !!! Non-Blocking wait
     return data
 
 
