@@ -94,7 +94,7 @@ if __name__ == '__main__':
     logger = logging.getLogger(__name__)
     logging.getLogger("asyncio").setLevel(logging.WARNING)
 
-    print("Constructing test pipeline")
+    print("Constructing test pipeline - P1")
 
     event_loop = asyncio.get_event_loop()
     event_loop.run_until_complete(pipeline_p1(event_loop))
