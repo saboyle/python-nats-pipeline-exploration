@@ -1,2 +1,3 @@
+# Override automatic github language assignment
 * linguist-vendored
 *.py linguist-vendored=false
