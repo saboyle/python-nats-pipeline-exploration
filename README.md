@@ -56,4 +56,6 @@ See Log Analysis workbook for more detailed analysis.
 
 ## Notes
 1. NATS.io provides limited delivery guarantees (at most once).
-2. Durability requirements may necessitate evaluation of alternatives depending on the use-case. 
+2. Durability requirements may necessitate evaluation of alternatives depending on the use-case.
+3. There is an open issue re the resolution of asyncio wrt time [https://bugs.python.org/issue31539]
+this manifests as some of the analysis showing stages taking less than their defined minimum durations. 
