@@ -17,6 +17,8 @@ The aim is to develop a generic implementation to:
 The example pipeline has been kept deliberately generic.  Namely a pipeline _Pn_ is composed of 4 sequential stages, 
 _S1_ .. _S4_.  Each stage taking a defined amount of time.
 
+![Pipeline](./images/Pipeline.png)
+
 Five separate versions of the pipeline have been implemented:
 
 P0 - No messaging, in-process, sequential implementation to provide a benchmark to assess subsequent implementations.
