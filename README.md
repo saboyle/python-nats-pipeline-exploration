@@ -2,6 +2,8 @@
 
 ## Overview
 
+[**STATUS**: DEV / ALPHA]
+
 Project to explore the use of python + nats to implement a scalable, low latency, distributed, computational pipeline 
 using Python Asyncio and NATS.io. 
 
@@ -35,6 +37,7 @@ P4 - Implemented with each stage having 1 or more dedicated processes.
 * Build a DSL for Pipeline and Stage construction.
 * Build production-ready version to include enhanced monitoring / logging etc. 
 * Use the project as part of broader research / teaching projects.
+* For completeness implement multiple process pipeline with sync calls (1 per stage, 1+ per stage)?
 * ???
 
 ## Summary findings
