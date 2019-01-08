@@ -60,4 +60,12 @@ See Log Analysis workbook for more detailed analysis.
 1. NATS.io provides limited delivery guarantees (at most once).
 2. Durability requirements may necessitate evaluation of alternatives depending on the use-case.
 3. There is an open issue re the resolution of asyncio wrt time [https://bugs.python.org/issue31539]
-this manifests as some of the analysis showing stages taking less than their defined minimum durations. 
+this manifests as some of the analysis showing stages taking less than their defined minimum durations.
+
+## Setup
+1. Requires a running NATS server either in the cloud, local or docker.
+2. Docker image can be started using:
+
+```bash
+docker run -p 4222:4222 -p 8222:8222 -p 6222:6222 --name gnatsd -ti nats:latest
+``` 
