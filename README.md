@@ -69,3 +69,8 @@ this manifests as some of the analysis showing stages taking less than their def
 ```bash
 docker run -p 4222:4222 -p 8222:8222 -p 6222:6222 --name gnatsd -ti nats:latest
 ``` 
+
+## References
+[1] (http://usingcsp.com/cspbook.pdf) "Communicating Sequential Processes"   
+[2] "Enterprise Integration Patterns - Hohpe and Woolf"
+ 
