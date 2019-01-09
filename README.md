@@ -57,7 +57,7 @@ P4 - Implemented with each stage having 1 or more dedicated processes.
 See Log Analysis workbook for more detailed analysis.
 
 ## Notes
-1. NATS.io provides limited delivery guarantees (at most once).
+1. NATS.io provides limited delivery guarantees (at most once), explore NATS-Streaming (at least once) [https://nats.io/documentation/streaming/nats-streaming-intro/].
 2. Durability requirements may necessitate evaluation of alternatives depending on the use-case.
 3. There is an open issue re the resolution of asyncio wrt time [https://bugs.python.org/issue31539]
 this manifests as some of the analysis showing stages taking less than their defined minimum durations.
