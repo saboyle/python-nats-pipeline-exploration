@@ -1,6 +1,6 @@
 # Utils
 
-## nats-wiretap
+## nats-wiretap [Ref: EIP - Hohpe & Woolfe, 547]
 
 ``` bash
 python nats-wiretap.py [queue-spec]
