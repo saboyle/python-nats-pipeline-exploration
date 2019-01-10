@@ -17,7 +17,7 @@ def pub_random(loop):
         print('Submitting random requests')
         for i in range(NUM_MESSAGES):
             jdata = {"i": i}
-            yield from nc.publish("p1.s0", json.dumps(jdata).encode('utf-8'))
+            yield from nc.publish('p1.s0', json.dumps(jdata).encode('utf-8'))
 
 
 if __name__ == '__main__':

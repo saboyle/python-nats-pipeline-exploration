@@ -41,9 +41,16 @@ def aggregator(loop, subject):
 
                     # Check if all stages in the pipeline are complete and publish to a control queue.
                     if sorted(cache[correlation_id].keys()) == ['p1.s1', 'p1.s2', 'p1.s3']:
-                        await nc.publish('c1.monitor', json.dumps(cache[correlation_id]).encode('utf-8'))
+                        summary = cache[correlation_id]
+                        summary['correlation_id'] = correlation_id
+
+                        await nc.publish('c1.monitor', json.dumps(summary).encode('utf-8'))
+
                         print("Completed: ", correlation_id, cache[correlation_id])
 
+                        # Remove the completed trace from the cache
+                        del cache[correlation_id]
+                        await nc.publish('c1.inflight', json.dumps({'inflight': len(cache)}).encode('utf-8'))
             else:
                 # print("NEW Correlation Id")
                 cache[correlation_id] = {}
